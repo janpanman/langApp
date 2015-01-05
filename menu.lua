@@ -1,23 +1,7 @@
 -- Globals
 pos = require("resolution")
-
 highscoreHandler = require("highscoreHandler")
-
---levelScores = {}
-
---print ("High scores: " .. tostring(highscores))
---print ("trying to pull a value " .. highscores.l11[1])
-
-
-_W = display.contentWidth
-_H = display.contentHeight
-_X = _W*.5
--- icon = {} 
--- star = {} 
--- levelTxt = {}
--- options = {}
-
--- dislay groups
+gf = require("globalFunctions")
 
 dict = require("dict.hy")
 customFont = dict.f
@@ -191,12 +175,7 @@ function scene:create( event )
 
   print ("== 0. creating pagegroup... ")
    local sceneGroup = self.view
-
-   -- Initialize the scene here.
-   -- Example: add display objects to "sceneGroup", add touch listeners, etc.
-   -- local background = display.newImage( sceneGroup, "images/green_sunbeam.jpg", _W/2, _H/2, false )
-   local background = display.newImage( sceneGroup, "images/blue-sunbeam-background.jpg", _W/2, _H/2, false )
-   -- local background = display.newImage( sceneGroup, "images/green_radiant.jpg", _W/2, _H/2, false )
+   local bg = gf:createBackground(sceneGroup, "images/blue-sunbeam-background.jpg", _X ,_Y )
    return true
 end
 

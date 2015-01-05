@@ -1,15 +1,17 @@
 -- Globals
 pos = require("resolution")
 highscoreHandler = require("highscoreHandler")
-
+gf = require "globalFunctions"
 
 
 
 dict = require("dict.hy")
 customFont = dict.f
+--[[
 _W = display.contentWidth
 _H = display.contentHeight
 _X = _W*.5
+]]-- 
 stop = false
 --sceneGroup = display.newGroup()
 labelTxt = {}
@@ -459,12 +461,7 @@ function scene:create( event )
 
 
    local sceneGroup = self.view
-
-   -- Initialize the scene here.
-   -- Example: add display objects to "sceneGroup", add touch listeners, etc.
-   -- local background = display.newImage( sceneGroup, "images/green_sunbeam.jpg", _W/2, _H/2, false )
-   local background = display.newImage( sceneGroup, "images/blue-sunbeam-background.jpg", _W/2, _H/2, false )
-   -- local background = display.newImage( sceneGroup, "images/green_radiant.jpg", _W/2, _H/2, false )
+   local bg = gf:createBackground(sceneGroup, "images/blue-sunbeam-background.jpg", _X ,_Y )
    return true
 end
 
