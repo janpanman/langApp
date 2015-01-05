@@ -1,0 +1,75 @@
+Corona to-do
+
+! Add splash screen... 
+
+! Create splash icon
+
+Main menu - 3 choices. 
+1 one writing <-> one visual
+2 one writing <-> three visuals
+3 three writing <-> one visual
+
+! #1 is not setup yet
+
+! #1, #2, #3 => need images (png) from 1011 till 1059
+only have 10 images... from 1000 till 1010.png
+
+! Casper png doggie
+- Happy woof
+- Good waf
+- Not good grrr
+- Try again grr2
+
+! back button, needs to get revised to just show the arrow
+
+! Animation or effect.. 
+
+! Think about marketing.. 
+- info page that shows additional apps
+- submit feature requests or report bugs
+- do a url get/put from my website.. 
+
+! sound effects? 
+Do we need some.. maybe for the doggie. 
+For the final score.. 
+* Yeaeaeahh applause 
+* woowie well done applause
+* hmmm
+
+! Purchase the Corona SDK license
+
+! Buy an Apple Developer license 
+
+! Figure out Device testing. 
+* ipad 1
+* ipod
+* iphone 5 
+
+! Scoring system improvements
+10 questions,.. each right question pops a balloon.. (?) 
+to a 3 star rating.. (?) 
+
+
+! page cleanup.. 
+I think the code loads screens and doesn't cleanup objects 100% upon exit. 
+memory leaks / utilization. 
+
+
+
+=======================
+
+splash -> 	main menu
+			- game choices  -> game 1, choose between the 6 levels. 
+										-> game 1, level n 	=> completion page / score results										
+							-> game 2, choose between the 6 levels 
+							
+			- settings ? 
+			- info 
+			
+
+
+
+
+
+
+
