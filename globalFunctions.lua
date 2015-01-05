@@ -1,6 +1,6 @@
 -- Global functions
 
-local function rotateImage( img) 
+function imgRotate( img) 
 	img.rotation = 0 
-	imgTrans = transition.to(img, {rotation=360, time=2000, onComplete=rotateImage(img)} )
+	imgTran = transition.to(img, {rotation=360, time=2000, onComplete=new(img)} )
 end

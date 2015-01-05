@@ -1,7 +1,7 @@
 
 --highscoreHandler = require("highscoreHandler")
 local composer = require("composer")
-require("globalFunctions")
+--require("globalFunctions")
 
 scene = composer.newScene()
 
@@ -38,12 +38,20 @@ star = {}
 function scene:create( event )
    print("scene:create")
    local sceneGroup = self.view
-
+   -- addBackground 
    local background = display.newImage( sceneGroup, "images/blue-sunbeam-background.jpg", _X, _Y, false )
 
+   local function imgRotate() 
+      --background.rotation = 0 
+      transition.to(background, {rotation=10, time=10000 } )
+      transition.to(background, {rotation=-10, time=10000, delay=10000, onComplete=imgRotate })
+      print("rotating... ")
+   end
 
    -- Initialize the scene here.
    -- Example: adAd display objects to "sceneGroup", add touch listeners, etc.
+   print("Trying to rotate the background... ")
+   timer.performWithDelay(1, imgRotate() )
    return true
 
 end
