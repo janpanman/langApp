@@ -50,10 +50,17 @@ function scene:show( event )
       -- Called when the scene is still off screen (but is about to come on screen).
    elseif ( phase == "did" ) then
       print("scene:show - did")
-      -- Called when the scene is now on screen.
+      -- Called when the scene is now on e
       -- Insert code here to make the scene come alive.
       -- Example: start timers, begin animation, play audio, etc.
 
+
+      if dog == nill then 
+         print("dog == nill,.. creating a new one")
+         local dog = gf:createDog(sceneGroup, "images/casper.jpg", 80, 80)
+      else 
+         print("dog already exist,.. ")
+      end
 
       local btn0 = display.newImageRect( sceneGroup, "images/menu1-1.png", 180, 80 )
       local btn1 = display.newImageRect( sceneGroup, "images/menu1-3.png", 180, 80 )
@@ -95,11 +102,14 @@ function scene:show( event )
          if (phase == "began" ) then
             if (t.id == 1 ) then 
                print ("going forward goto game using options 1")
+               -- timer.cancel( dogJumpTimer )
+               --display.remove(dog)
                btn1:removeEventListener( "touch", forward )
                btn2:removeEventListener( "touch", forward )
                composer.gotoScene("menu", options1)
             elseif (t.id == 2 ) then 
                print ("going forward goto game using options 2")
+
                btn1:removeEventListener( "touch", forward )
                btn2:removeEventListener( "touch", forward )
                composer.gotoScene("menu", options2 )
@@ -111,6 +121,7 @@ function scene:show( event )
       
       btn1:addEventListener( "touch", forward )
       btn2:addEventListener( "touch", forward )
+
 
 
    end
